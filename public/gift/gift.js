@@ -199,8 +199,9 @@ function display(){
 	var content    = '<p style="margin-bottom:10px;">有<b style="font-size:36px;">'
 			         + missYear +'年'+ missMonth +'月'+ missDay +'天'+
 			         '</b>从的你生命中流逝</p><p style="margin-bottom:10px;">下一颗巧克力是什么味？</P>\
-			          <p>本来可以时钟分钟跳动的，不过挺无趣的。</p><p>技术有限，粗制滥造。</p>有什么问题？猛击<a href="mailto:xavierskip@gmail.com">这里</a>\
-			          <span>应该没有BUG了吧<br>↑↑↓↓←→←→BA</span><img src="img/cake.png" class="cake">',
+			          \
+					  \
+			          <span>这下应该没有BUG了吧<br>↑↑↓↓←→←→BA</span><img src="img/cake.png" class="cake">',
 		time       = document.createElement("div");	         
 	time.setAttribute('id','time');
 	time.setAttribute('class','box');
