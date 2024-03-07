@@ -13,6 +13,7 @@
 		add = $('<img id="add" src="img/add.png" alt="滚轮滚" title="刷新">');
 	b.append(add);
 	add.show();
+	add.addClass('floating-img');
 	// useragent
 	var browserName = navigator.userAgent.toLowerCase();
 	Browser = {

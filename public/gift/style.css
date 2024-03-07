@@ -241,7 +241,7 @@ small a:hover {
 
 #arg1 {
 	position: absolute;
-	top: 30px;
+	top: 10%;
 	left: 10%;
 }
 #arg2 {
@@ -290,5 +290,25 @@ small a:hover {
 	#papper {
 		left: 0;
 		right: 0;
+	}
+}
+
+.floating-img {
+	animation-name: floating;
+	animation-duration: 2.5s;
+	animation-iteration-count: infinite;
+	animation-timing-function: ease-out;
+}
+@keyframes floating {
+	from {
+		transform: translate(0, 0px);
+	}
+
+	65% {
+		transform: translate(0, 15px);
+	}
+
+	to {
+		transform: translate(0, -0px);
 	}
 }
