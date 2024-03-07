@@ -90,7 +90,6 @@ small a:hover {
 .stop {
 	background: url('img/stop.png') no-repeat;
 }
-
 .box {
 	line-height: 30px;
 	width: 420px;
@@ -146,13 +145,13 @@ small a:hover {
 }
 #time {
 	position: absolute;
-	top: 23%;
+	top: 20%;
 	right: 7%;
 }
 #papper {
 	position: absolute;
-	top: 70px;
-	left: 130px;
+	top: 10%;
+	left: 7%;
 	height: 480px;
 	width: 620px;
 	font-size: 17px;
@@ -281,4 +280,15 @@ small a:hover {
 	position: absolute;
 	top: 30%;
 	left: 30%;
+}
+@media screen and (max-width: 1080px) {
+	#time {
+		position: relative;
+		top: 58%;
+		right: 0;
+	}
+	#papper {
+		left: 0;
+		right: 0;
+	}
 }
