@@ -70,7 +70,7 @@ small a:hover {
 	height: 100%;
 	width: 100%;
 	background-image: url('img/bg.jpg') ;
-	background-size: 100%;
+	background-size: cover;
 	background-position: 100%;
 	z-index: -3;
 }
@@ -180,7 +180,7 @@ small a:hover {
         #F7F4B4 29px,
         #80B49C 30px
     );		
-	-webkit-background-size: 100% 30px;
+	background-size: 100% 30px;
 }
 #papper:before,#papper:after {
 	position: absolute;
