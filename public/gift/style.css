@@ -239,6 +239,10 @@ small a:hover {
 	line-height: 30px;
 }
 
+#ua a{
+	color:#333;
+}
+
 #arg1 {
 	position: absolute;
 	top: 10%;
