@@ -16,7 +16,7 @@ bun dev
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-if you want run in [http://0.0.0.0:3000],you can
+if you want run in [http://0.0.0.0:3000](http://0.0.0.0:3000),you can run
 
 ```bash
 npx next dev -H 0.0.0.0 -p 3000
