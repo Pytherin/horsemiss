@@ -21,7 +21,7 @@ small {
 	left:50%;
 	margin-left: -161px; 
 }
-a,a:visited,a:hover {
+small a, small a:visited, small a:hover {
 	text-decoration: none;
 	border-top: 1px dashed rgba(0,0,0,0);
 	border-left: 1px dashed rgba(0,0,0,0) ;
