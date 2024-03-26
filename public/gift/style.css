@@ -245,29 +245,31 @@ small a:hover {
 
 #arg1 {
 	position: absolute;
-	top: 10%;
+	top: 12%;
 	left: 10%;
+	display: none;
 }
 #arg2 {
 	position: absolute;
 	top: 0px;
 	right: 10%;
+	transform: translateY(50%);
 	display: none;
 }
 #arg3 {
 	position: absolute;
-	top:100px;
+	top: 30%;
 	left: 70%;
 }
 #arg4 {
 	position: absolute;
-	top:20%;
+	top:30%;
 	left:45%;
 	display: none;
 }
 #arg5 {
 	position: absolute;
-	top: 23%;
+	top: 30%;
 	left: 60%;
 	display: none;
 }

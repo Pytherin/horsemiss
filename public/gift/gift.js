@@ -55,6 +55,7 @@ $(document).ready(function() {
         b.append(useragent);
     }
     //scroll
+    $('#arg1').fadeIn(1000);
     var tmp = w.scrollTop(),
         scrolls = 0;
     w.scroll(function(){
@@ -64,11 +65,10 @@ $(document).ready(function() {
         }else if (current<tmp){
             scrolls--
         }else{ return true}
-        tmp = current;console.log(scrolls)
-
-        if (scrolls == 1) {
+        tmp = current;console.log(scrolls);
+        if (scrolls == 9) {
             $('#arg1').animate({'top':'toggle',"opacity": "toggle"},700)
-            $('#arg2').fadeIn(200).animate({'top':'100px'},700)
+            $('#arg2').fadeIn(300).animate({'top':'18%'},700)
         }
         if (scrolls == 13) {
             $('#arg4').fadeIn(700)
