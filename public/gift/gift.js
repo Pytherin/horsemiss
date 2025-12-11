@@ -172,52 +172,45 @@ function display(){
 })();
 
 //  这一段求年月日的可把我害惨了！！我擦！！！实在没想出什么好主意了。。
+function diffYMD(birthDate, currentDate = new Date()) {
+    // always birthDate < currentDate
+    let by = birthDate.getFullYear();
+    let bm = birthDate.getMonth();      // 0-based
+    let bd = birthDate.getDate();
+
+    let cy = currentDate.getFullYear();
+    let cm = currentDate.getMonth();    // 0-based
+    let cd = currentDate.getDate();
+
+    // 初步差值
+    let missYear = cy - by;
+    let missMonth = cm - bm;
+    let missDay = cd - bd;
+
+    // 如果日为负，要向前借一个月
+    if (missDay < 0) {
+        // 借一个月 → 获取birthday month的月底
+        let bmd = new Date(by, bm+1, 0).getDate();
+        missDay = bmd-bd+cd;
+        missMonth -= 1;
+    }
+
+    // 如果月为负，要借一年
+    if (missMonth < 0) {
+        missMonth += 12;
+        missYear -= 1;
+    }
+
+    return { missYear, missMonth, missDay };
+}
 (function(){
-    function Time(date){
-        var t = {
-            year:  date.getFullYear(),
-            month: date.getMonth(),
-            day:   date.getDate()
-        }
-        return t
-    }
-
-    var now        = new Time(new Date()),
-        birthday   = new Time(new Date(1991,9,7)),    //坑爹呀！月份是从0开始的呀!
-        missYear   = 0,
-        missMonth  = 0,
-        missDay    = 0,
-        month      = [31,28,31,30,31,30,31,31,30,31,30,31],
-        L_month    = [31,29,31,30,31,30,31,31,30,31,30,31];
-            
-    if (now.year > birthday.year) {
-        missYear = now.year - birthday.year;
-    } else {
-        return 0 
-    };
-    if (now.month >= birthday.month && now.day >= birthday.day) {
-        missMonth = now.month - birthday.month;
-    } else{
-        missYear -=1;
-        missMonth = 12 - birthday.month + now.month;
-    };
-    if ( now.day >= birthday.day ) {
-        missDay = now.day - birthday.day;
-    } else{
-        missMonth -=1;
-        missDay = date() - birthday.day + now.day;
-    };
-
-    function date(){
-        if ( now.year%4==0 && now.year%100 != 0 || now.year%400 == 0 ) {
-            return L_month[now.month]		
-        }else {
-            return month[now.month]
-        }
-    }
+    var now      = new Date(),
+        birthday = new Date(1992,9,7),    //坑爹呀！月份是从0开始的呀!
+        diff     = diffYMD(birthday, now);
+    
     // output
     var content    = '<p style="margin-bottom:10px;">有<b style="font-size:36px;">'
-                     + missYear +'年'+ missMonth +'月'+ missDay +'天'+
+                     + diff.missYear +'年'+ diff.missMonth +'月'+ diff.missDay +'天'+
                      '</b>从的你生命中流逝</p><p style="margin-bottom:10px;">下一颗巧克力是什么味？</P>\
                       \
                       \
